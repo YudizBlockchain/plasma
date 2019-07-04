@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "9dee2a29-a0d8-43c0-be0a-45ab188f1cdb",
+		"name": "Plasma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3001/blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/blocks",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"blocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/pool",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/pool",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"pool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/utxo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/utxo",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"utxo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/mineBlock",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/mineBlock",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"mineBlock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/transact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "data",
+						"value": "{\"from\": \"0xE6853BC43Dc06B996b0fFD4357Fccdb2fF6dbb6a\", \"to\": \"0x6D80E168305fcA47569df7fCac42d5B3C8C2C2E7\", \"amount\": 0.05}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\": \"0xE6853BC43Dc06B996b0fFD4357Fccdb2fF6dbb6a\",\n\t\"to\": \"0x6D80E168305fcA47569df7fCac42d5B3C8C2C2E7\",\n\t\"amount\": 0.05\n\t\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/transact",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"transact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "data",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"0xE6853BC43Dc06B996b0fFD4357Fccdb2fF6dbb6a\",\n\t\"amount\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/deposit",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/withdraw/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"blkNum\": 1,\n\t\"txIndex\": 0,\n\t\"oIndex\": 0,\n\t\"from\": \"0x6D80E168305fcA47569df7fCac42d5B3C8C2C2E7\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/withdraw/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"withdraw",
+						"create"
+					],
+					"query": [
+						{
+							"key": "Content-type",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/withdraw/challenge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"withdrawalId\": 4000000000,\n\t\"blkNum\": 4,\n\t\"txIndex\": 2,\n\t\"oIndex\": 1,\n\t\"from\": \"0x6C7f749d0E21aA6478aF8e7Adc362a8bF76Be826\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/withdraw/challenge",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"withdraw",
+						"challenge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/withdraw/finalize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"from\": \"0x6C7f749d0E21aA6478aF8e7Adc362a8bF76Be826\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/withdraw/finalize",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"withdraw",
+						"finalize"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
