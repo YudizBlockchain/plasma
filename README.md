@@ -39,7 +39,7 @@ Import all API collection in Postman by clicking below button.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/1c7b783c9b9803ec66b4)
 
-Or you can manually import this file into postman: [PlasmaAPI_collection.json](https://github.com)
+Or you can manually import this file into postman: [PlasmaAPI_collection.json](https://raw.githubusercontent.com/YudizBlockchain/plasma/master/PlasmaAPI_collection.json)
 
 ##Introduction to API
 ### Get blockchain
