@@ -72,8 +72,8 @@ Deposit ethereum into plasma smart contract.
 You can set this parameter in postman. Let's deposit 1 ethereum from this address,
 ```json
 {
-	"address": "0xE6853BC43Dc06B996b0fFD4357Fccdb2fF6dbb6a", //Deposit from whom
-	"amount": 1 //Amount of Ethereum
+	"address": "0xE6853BC43Dc06B996b0fFD4357Fccdb2fF6dbb6a",
+	"amount": 1 
 }
 ```
 Now send request to http://localhost:30001/deposit
@@ -226,4 +226,4 @@ Finalize withdrawals manually.
 	"from": "0xE6853BC43Dc06B996b0fFD4357Fccdb2fF6dbb6a"
 }
 ```
-Then submit request to http://localhost:3001/withdraw/finalize
+Then submit request to http://localhost:3001/withdraw/finalize. Then you will receive your funds to your wallet.
